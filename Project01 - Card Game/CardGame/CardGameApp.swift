@@ -1,14 +1,14 @@
 //
-//  lesson05App.swift
-//  lesson05
+//  CardGameApp.swift
+//  CardGame
 //
-//  Created by 박지원 on 2021/03/31.
+//  Created by 박지원 on 2021/05/31.
 //
 
 import SwiftUI
 
 @main
-struct lesson05App: App {
+struct CardGameApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
