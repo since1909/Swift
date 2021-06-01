@@ -15,6 +15,7 @@ class ViewController: UITableViewController {
         
         title = "Storm Viewer"
         navigationController?.navigationBar.prefersLargeTitles = true
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(shareTapped))
         
         let fm = FileManager.default
         let path = Bundle.main.resourcePath!
@@ -28,6 +29,12 @@ class ViewController: UITableViewController {
         }
         
         print(pictures)
+    }
+    
+    @objc func shareTapped() {
+        let vc = UIActivityViewController(activityItems: ["storm viewer"], applicationActivities: [])
+        vc.popoverPresentationController?.barButtonItem = navigationItem.rightBarButtonItem
+        present(vc, animated: true)
     }
     
     //section 안에 얼마나 row 가 들어가나
