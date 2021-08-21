@@ -8,25 +8,45 @@
 import UIKit
 
 class ComposeViewController: UIViewController {
-    @IBOutlet var memoTextView: UITextView!
+    
+    var editTarget: Memo?
+    
+     @IBOutlet var memoTextView: UITextView!
+    
     @IBAction func close(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
     
     @IBAction func save(_ sender: Any) {
-        let memo = memoTextView.text
+        guard let memo = memoTextView.text, memo.count > 0 else {
+            alert(message: "메모를 입력하세요.")
+            return
+        }
         
         //let newMemo = Memo(content: memo ?? "")
         //Memo.dummyMemoList.append(newMemo)
         
-        DataManager.shared.addNewMemo(memo)
+        if let target = editTarget {
+            target.content = memo
+            DataManager.shared.saveContext()
+        } else {
+            DataManager.shared.addNewMemo(memo)
+        }
         
         dismiss(animated: true, completion: nil)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        if let memo = editTarget {
+            navigationItem.title = "메모 편집"
+            memoTextView.text = memo.content
+            NotificationCenter.default.post(name: ComposeViewController.memoDidChange, object: nil)
+        } else {
+            navigationItem.title = "새 메모"
+            memoTextView.text = ""
+        }
         // Do any additional setup after loading the view.
     }
     
@@ -41,4 +61,8 @@ class ComposeViewController: UIViewController {
     }
     */
 
+}
+
+extension ComposeViewController {
+    static let memoDidChange = Notification.Name(rawValue: "memoDidChange")
 }

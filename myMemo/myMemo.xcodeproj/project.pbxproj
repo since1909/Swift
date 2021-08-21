@@ -18,6 +18,7 @@
 		8735895E26CFF2FE00FFAD0B /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8735895D26CFF2FE00FFAD0B /* ComposeViewController.swift */; };
 		8735896026D0CF2A00FFAD0B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8735895F26D0CF2A00FFAD0B /* DetailViewController.swift */; };
 		8735896326D0D95D00FFAD0B /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8735896226D0D95D00FFAD0B /* DataManager.swift */; };
+		8735896526D10EB100FFAD0B /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8735896426D10EB100FFAD0B /* UIViewController+Alert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		8735895D26CFF2FE00FFAD0B /* ComposeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeViewController.swift; sourceTree = "<group>"; };
 		8735895F26D0CF2A00FFAD0B /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		8735896226D0D95D00FFAD0B /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		8735896426D10EB100FFAD0B /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 				8735895B26CFEADE00FFAD0B /* MemoListTableViewController.swift */,
 				8735895D26CFF2FE00FFAD0B /* ComposeViewController.swift */,
 				8735895F26D0CF2A00FFAD0B /* DetailViewController.swift */,
+				8735896426D10EB100FFAD0B /* UIViewController+Alert.swift */,
 			);
 			path = myMemo;
 			sourceTree = "<group>";
@@ -168,6 +171,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8735896526D10EB100FFAD0B /* UIViewController+Alert.swift in Sources */,
 				8735894226CFE36600FFAD0B /* AppDelegate.swift in Sources */,
 				8735896326D0D95D00FFAD0B /* DataManager.swift in Sources */,
 				8735894426CFE36600FFAD0B /* SceneDelegate.swift in Sources */,
