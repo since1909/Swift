@@ -33,6 +33,8 @@ class ComposeViewController: UIViewController {
             DataManager.shared.addNewMemo(memo)
         }
         
+        //boradcasting 방식
+        NotificationCenter.default.post(name: ComposeViewController.newMemoDidInsert, object: nil)
         dismiss(animated: true, completion: nil)
     }
     
@@ -64,5 +66,6 @@ class ComposeViewController: UIViewController {
 }
 
 extension ComposeViewController {
+    static let newMemoDidInsert = Notification.Name(rawValue: "newMemoDidInsert")
     static let memoDidChange = Notification.Name(rawValue: "memoDidChange")
 }
