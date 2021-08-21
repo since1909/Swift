@@ -19,6 +19,8 @@ class ComposeViewController: UIViewController {
         //let newMemo = Memo(content: memo ?? "")
         //Memo.dummyMemoList.append(newMemo)
         
+        DataManager.shared.addNewMemo(memo)
+        
         dismiss(animated: true, completion: nil)
     }
     
