@@ -11,7 +11,7 @@ class ComposeViewController: UIViewController {
     
     var editTarget: Memo?
     
-     @IBOutlet var memoTextView: UITextView!
+    @IBOutlet var memoTextView: UITextView!
     
     @IBAction func close(_ sender: Any) {
         dismiss(animated: true, completion: nil)
@@ -29,12 +29,14 @@ class ComposeViewController: UIViewController {
         if let target = editTarget {
             target.content = memo
             DataManager.shared.saveContext()
+            NotificationCenter.default.post(name: ComposeViewController.memoDidChange, object: nil)
         } else {
             DataManager.shared.addNewMemo(memo)
+            NotificationCenter.default.post(name: ComposeViewController.newMemoDidInsert, object: nil)
         }
         
         //boradcasting 방식
-        NotificationCenter.default.post(name: ComposeViewController.newMemoDidInsert, object: nil)
+        
         dismiss(animated: true, completion: nil)
     }
     

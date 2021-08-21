@@ -56,8 +56,8 @@ class MemoListTableViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        //DataManager.shared.fetchMemo()
-        //tableView.reloadData()
+        DataManager.shared.fetchMemo()
+        tableView.reloadData()
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
