@@ -19,6 +19,7 @@
 		8735896026D0CF2A00FFAD0B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8735895F26D0CF2A00FFAD0B /* DetailViewController.swift */; };
 		8735896326D0D95D00FFAD0B /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8735896226D0D95D00FFAD0B /* DataManager.swift */; };
 		8735896526D10EB100FFAD0B /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8735896426D10EB100FFAD0B /* UIViewController+Alert.swift */; };
+		878D518426D25DA100D25104 /* memoLaunch.png in Resources */ = {isa = PBXBuildFile; fileRef = 878D518326D25DA100D25104 /* memoLaunch.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,8 @@
 		8735895F26D0CF2A00FFAD0B /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		8735896226D0D95D00FFAD0B /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		8735896426D10EB100FFAD0B /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
+		878D518226D24A1C00D25104 /* myMemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = myMemo.entitlements; sourceTree = "<group>"; };
+		878D518326D25DA100D25104 /* memoLaunch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = memoLaunch.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +71,8 @@
 		8735894026CFE36600FFAD0B /* myMemo */ = {
 			isa = PBXGroup;
 			children = (
+				878D518326D25DA100D25104 /* memoLaunch.png */,
+				878D518226D24A1C00D25104 /* myMemo.entitlements */,
 				8735896126D0D94700FFAD0B /* Data */,
 				8735895826CFE93500FFAD0B /* Model */,
 				8735894126CFE36600FFAD0B /* AppDelegate.swift */,
@@ -160,6 +165,7 @@
 			files = (
 				8735895126CFE36700FFAD0B /* LaunchScreen.storyboard in Resources */,
 				8735894E26CFE36700FFAD0B /* Assets.xcassets in Resources */,
+				878D518426D25DA100D25104 /* memoLaunch.png in Resources */,
 				8735894926CFE36600FFAD0B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -326,7 +332,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = myMemo/myMemo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6S48J2793Y;
 				INFOPLIST_FILE = myMemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -335,6 +343,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jiwon.myMemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -345,7 +354,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = myMemo/myMemo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6S48J2793Y;
 				INFOPLIST_FILE = myMemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -354,6 +365,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jiwon.myMemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
